@@ -12,8 +12,7 @@ const contactSections = [
   <div class="mx-auto max-w-7xl px-6 lg:flex lg:px-8 py-20">
     <div class="lg:ml-96 lg:flex lg:w-full lg:justify-end lg:pl-32">
       <div class="mx-auto max-w-lg lg:mx-0 lg:w-0 lg:max-w-xl lg:flex-auto">
-        <h1
-          class="font-display text-5xl    font-medium text-kotei-800">
+        <h1 class="font-display text-5xl font-medium text-kotei-800">
           Contact us
         </h1>
         <p class="mt-4 text-neutral-500 text-sm">
@@ -21,7 +20,8 @@ const contactSections = [
           the specifics.
         </p>
         <div
-          class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8 mt-8 border-t pt-8">
+          class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8 mt-8 border-t border-neutral-300 pt-8"
+        >
           {
             contactSections.map((section) => (
               <div>
@@ -41,12 +41,11 @@ const contactSections = [
         <form
           action="#"
           method="POST"
-          class="mt-8 border-t pt-8">
+          class="mt-8 border-t border-neutral-300 pt-8"
+        >
           <div class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2">
             <div>
-              <label
-                for="first-name"
-                class="block text-sm text-neutral-500"
+              <label for="first-name" class="block text-sm text-neutral-500"
                 >First name</label
               >
               <div class="mt-2.5">
@@ -62,9 +61,7 @@ const contactSections = [
               </div>
             </div>
             <div>
-              <label
-                for="last-name"
-                class="block text-sm text-neutral-500"
+              <label for="last-name" class="block text-sm text-neutral-500"
                 >Last name</label
               >
               <div class="mt-2.5">
@@ -80,9 +77,7 @@ const contactSections = [
               </div>
             </div>
             <div class="sm:col-span-2">
-              <label
-                for="email"
-                class="block text-sm text-neutral-500"
+              <label for="email" class="block text-sm text-neutral-500"
                 >Email</label
               >
               <div class="mt-2.5">
@@ -97,9 +92,7 @@ const contactSections = [
               </div>
             </div>
             <div class="sm:col-span-2">
-              <label
-                for="phone-number"
-                class="block text-sm text-neutral-500"
+              <label for="phone-number" class="block text-sm text-neutral-500"
                 >Phone number</label
               >
               <div class="mt-2.5">
@@ -115,9 +108,7 @@ const contactSections = [
               </div>
             </div>
             <div class="sm:col-span-2">
-              <label
-                for="message"
-                class="block text-sm text-neutral-500"
+              <label for="message" class="block text-sm text-neutral-500"
                 >Message</label
               >
               <div class="mt-2.5">

@@ -1,21 +1,31 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+@layer components {
+  .prose-styles {
+  }
+}
+@theme {
+  /* Typography*/
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-display: "Boska", sans-serif;
+  /* Colors */
+  --color-kotei-50: hsl(207, 60%, 97%);
+  --color-kotei-100: hsl(206, 50%, 94%);
+  --color-kotei-200: hsl(204, 52%, 86%);
+  --color-kotei-300: hsl(203, 53%, 74%);
+  --color-kotei-400: hsl(202, 51%, 60%);
+  --color-kotei-500: hsl(202, 49%, 48%);
+  --color-kotei-600: hsl(204, 54%, 39%);
+  --color-kotei-700: hsl(205, 54%, 32%);
+  --color-kotei-800: hsl(204, 50%, 27%);
+  --color-kotei-900: hsl(206, 44%, 24%);
+  --color-kotei-950: hsl(207, 43%, 16%);
+  --color-kotei-1000: hsl(215, 63%, 12%);
+  --color-kotei-1050: hsl(210, 54%, 5%);
+}
 :root {
-  font-family: Inter, sans-serif;
-  font-feature-settings:
-  "liga" 1,
-  "calt" 1, /* Contextual Alternates */
-  "dlig" 1, /* Discretionary Ligatures */
-  "ss07" 1, /* fSquare punctuation */
-  "ss08" 1, /* Square quotes */
-  "zero" 1, /* Slashed zero */
-  "tnum" 1, /* Tabular numbers */
-    "cv03" 1, /* Open six */
-    "cv04" 1, /* Open nine */
-    "cv01" 1, /* Alternate one */
-    "cv09", /* Flat-top three */
-    "cv02" 1; /* Open 4 */
 }
 @supports (font-variation-settings: normal) {
   /* Use variable font if supported */
@@ -27,6 +37,15 @@
   background: #333;
 }
 :root {
+  /* Typography */
+  font-family: Inter, sans-serif;
+  font-feature-settings: "liga" 1, "calt" 1,
+    /* Contextual Alternates */ "dlig" 1, /* Discretionary Ligatures */ "ss07" 1,
+    /* fSquare punctuation */ "ss08" 1, /* Square quotes */ "zero" 1,
+    /* Slashed zero */ "tnum" 1, /* Tabular numbers */ "cv03" 1,
+    /* Open six */ "cv04" 1, /* Open nine */ "cv01" 1,
+    /* Alternate one */ "cv09", /* Flat-top three */ "cv02" 1; /* Open 4 */
+  /* Style code blocks */
   --astro-code-color-text: #2d4b65;
   --astro-code-color-background: #fafafa;
   --astro-code-token-constant: #893d88;
@@ -34,7 +53,7 @@
   --astro-code-token-comment: #1c2a39;
   --astro-code-token-keyword: #2d4b65;
   --astro-code-token-parameter: #ffffff;
-  --astro-code-token-function:#8b75db;
+  --astro-code-token-function: #8b75db;
   --astro-code-token-string-expression: #3f6d95;
   --astro-code-token-punctuation: #7a8028;
   --astro-code-token-link: #7a8028;
