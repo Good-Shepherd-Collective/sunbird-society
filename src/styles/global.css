@@ -47,7 +47,7 @@
     /* Alternate one */ "cv09", /* Flat-top three */ "cv02" 1; /* Open 4 */
   /* Style code blocks */
   --astro-code-color-text: #2d4b65;
-  --astro-code-color-background: #fafafa;
+  --astro-code-background: #fafafa;
   --astro-code-token-constant: #893d88;
   --astro-code-token-string: #747c25;
   --astro-code-token-comment: #1c2a39;
