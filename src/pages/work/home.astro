@@ -1,41 +1,40 @@
 ---
-import { getCollection } from "astro:content";
-const allPosts = await getCollection("work");
+// Fundations
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import WorkEntries from "../../components/work/WorkEntries.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+// Components
+import WorkEntries1 from "@/components/work/WorkEntries1.astro";
+// Content
+import { getCollection } from "astro:content";
+const allWork = await getCollection("work");
 ---
 
 <BaseLayout>
-  <section class="bg-neutral-100">
-    <div class="mx-auto max-w-7xl px-6 lg:flex lg:px-8 py-20">
-      <div class="lg:ml-96 lg:flex lg:w-full lg:justify-end lg:pl-32">
-        <div class="mx-auto max-w-lg lg:mx-0 lg:w-0 lg:max-w-xl lg:flex-auto">
-          <h1
-            class="font-display text-5xl    font-medium text-kotei-800">
-            Work
-          </h1>
-          <p class="mt-4 text-sm text-neutral-500">
-            <span class="lgh:blocl">
-              We have a deep appreciation for our clients.</span
-            >
-            <span
-              >Take a peek at a few of our most recent projects showcased below</span
-            >
-          </p>
-          <div class="grid grid-cols-2 lg:grid-cols-2 mt-12 gap-2">
-            {
-              allPosts.slice().map((post) => (
-                <WorkEntries
-                  url={"/work/" + post.slug}
-                  client={post.data.client}
-                  alt={post.data.title}
-                  thumbnail={post.data.thumbnail.url}
-                />
-              ))
-            }
-          </div>
+  <section>
+    <Wrapper variant="standard" class="py-24 lg:py-48">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-start">
+        <div class="overflow-hidden">
+          <Text
+            tag="h1"
+            variant="displayXL"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            class="dark:text-white text-base-900 font-medium tracking-tighter"
+          >
+            all case studies
+          </Text>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-y-12 gap-2 lg:col-span-3"
+        >
+          {
+            allWork.map((post, index) => (
+              <WorkEntries1 post={post} index={index + 1} />
+            ))
+          }
         </div>
       </div>
-    </div>
+    </Wrapper>
   </section>
 </BaseLayout>

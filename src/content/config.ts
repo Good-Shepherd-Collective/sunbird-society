@@ -1,21 +1,102 @@
 import { defineCollection, z } from "astro:content";
 const work = defineCollection({
   schema: z.object({
-    client: z.string().optional(),
-    description: z.string().optional(),
-    website: z.string().optional(),
+    work: z.string(),
+    live: z.string(),
+    title: z.string(),
+    description: z.string(),
+    intro: z
+      .array(
+        z.object({
+          paragraphs: z.array(z.string()).optional(),
+        })
+      )
+      .optional(),
+    outro: z
+      .array(
+        z.object({
+          paragraphs: z.array(z.string()).optional(),
+        })
+      )
+      .optional(),
+    highlights: z
+      .array(
+        z.object({
+          title: z.string().optional(),
+          paragraphs: z.array(z.string()).optional(),
+        })
+      )
+      .optional(),
+    projectData: z
+      .array(
+        z.object({
+          client: z.string(),
+          service: z.string(),
+          sector: z.string(),
+          year: z.string(),
+        })
+      )
+      .optional(),
+    credits: z
+      .array(
+        z.object({
+          name: z.string(),
+          role: z.string(),
+        })
+      )
+      .optional(),
+   
+    images: z.array(
+      z.object({
+        url: z.string(),
+        alt: z.string(),
+      })
+    ),
     thumbnail: z.object({
       url: z.string(),
       alt: z.string(),
     }),
   }),
 });
-const infopages = defineCollection({
+
+const store = defineCollection({
   schema: z.object({
-    page: z.string(),
+    price: z.string(),
+    title: z.string(),
+    checkout: z.string(),
+    license: z.string(),
+    highlights: z.array(z.string()),
+    specifications: z
+      .array(
+        z.object({
+          name: z.string(),
+          value: z.string(),
+        })
+      )
+      .optional(),
+    description: z.string(),
+    image: z.object({
+      url: z.string(),
+      alt: z.string(),
+    }),
+    images: z.array(
+      z.object({
+        url: z.string(),
+        alt: z.string(),
+      })
+    ),
+    faq: z
+      .array(
+        z.object({
+          question: z.string(),
+          answer: z.string(),
+        })
+      )
+      .optional(),
   }),
 });
-const postsCollection = defineCollection({
+
+const posts = defineCollection({
   schema: z.object({
     title: z.string(),
     pubDate: z.date(),
@@ -25,11 +106,15 @@ const postsCollection = defineCollection({
       url: z.string(),
       alt: z.string(),
     }),
+    authorAvatar: z.object({
+      url: z.string(),
+      alt: z.string()
+    }),
     tags: z.array(z.string()),
   }),
 });
 export const collections = {
   work: work,
-  infopages: infopages,
-  posts: postsCollection,
+  store: store,
+  posts: posts,
 };

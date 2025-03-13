@@ -1,16 +1,25 @@
 ---
-import BaseHead from "@/components/BaseHead.astro";
-import Sidebar from "@/components/global/Sidebar.astro";
+// Foundations
+import "../styles/global.css";
+import BaseHead from "@/components/fundations/head/BaseHead.astro";
+// Components
+import Footer from "@/components/global/Footer.astro";
+import Navigation from "@/components/global/Navigation.astro";
+// Scripts
+import AOSBody from "@/components/fundations/scripts/AOSBody.astro";
 ---
-<html lang="en" >
+
+<html lang="en" class="scroll-smooth">
   <head>
     <BaseHead />
   </head>
-  <body class="flex min-h-full flex-col bg-neutral-50">
-    <Sidebar />
-    <slot />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <body class="dark:bg-base-900 bg-base-100 ">
+    <Navigation />
+    <main class="grow">
+      <slot />
+    </main>
+  <Footer/>
+
+    <AOSBody />
   </body>
 </html>
