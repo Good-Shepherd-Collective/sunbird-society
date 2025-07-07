@@ -1,7 +1,7 @@
 ---
 // Assets
 import { Image } from "astro:assets";
-import Avatar from "@/images/avatar.jpeg";
+import AboutImage from "src/images/assets/about-page.jpg"
 // Team images
 import One from "@/images/team/1.jpeg";
 import Two from "@/images/team/2.jpeg";
@@ -148,15 +148,13 @@ const teamMembers = [
           data-aos-duration="1500"
           class="dark:text-white xl:text-6xl tracking-tight font-medium text-black text-balance"
         >
-          Dezain Sutajio Kotei® is a design studio based in Fukuoka that
-          specializes in creating beautiful and simple brands for businesses
-          that customers remember.
+          The Sunbird Society was born from a pressing recognition that historiographers, archivists, and oral history practitioners faced significant barriers in preserving indigenous knowledge systems that predate colonial influence.
         </Text>
       </div>
       <Image
         width={1000}
         height={2000}
-        src={Avatar}
+        src={AboutImage}
         alt="#_"
         class="w-full aspect-[8/6] mt-4 object-cover object-center"
       />
@@ -166,164 +164,19 @@ const teamMembers = [
         variant="textXL"
         class="text-base-500 dark:text-base-300 lg:text-balance mt-12 md:max-w-2xl"
       >
-        At Dezain Sutajio Kotei®, we craft thoughtful, elegant design solutions
-        that leave a lasting impression. Based in Fukuoka, our studio
-        specializes in distilling brands to their essence—creating simple,
-        memorable identities that connect with audiences effortlessly.
+       As scholars across disciplines witnessed the accelerating loss of these irreplaceable cultural repositories, it became evident that existing academic and funding structures were inadequate to support the collaborative, long-term research necessary for comprehensive documentation. We founded the Society to address this critical gap, creating a dedicated platform where committed researchers could coordinate efforts, share resources, and access sustainable funding for their preservation work.
         <br />
         <br />
-        With a deep appreciation for clarity, balance, and craftsmanship, we blend
-        strategy and aesthetics to build brands that feel both timeless and distinctive.
-        Our work is rooted in precision and purpose, ensuring that every design is
-        not only visually compelling but also meaningful and functional.
+        Our organization emerged specifically to chronicle voices that have been systematically marginalized throughout recorded history, recognizing that pre-colonial indigenous knowledge systems represent invaluable primary sources for understanding the full spectrum of human experience. These oral traditions, ceremonial practices, and epistemological frameworks offer unique insights into alternative ways of organizing knowledge, understanding natural systems, and structuring communities—perspectives that remain largely absent from conventional historical narratives. The urgency of this work cannot be overstated, as many of these knowledge systems exist solely in the memories and practices of aging community members.
+
+
         <br />
         <br />
-        We believe that great design is an experience—one that speaks without excess,
-        resonates without noise, and endures beyond trends. Through a refined and
-        intentional approach, we shape identities that stand out in a world of fleeting
-        impressions.
+       The Sunbird Society operates as both a collaborative network and a financial conduit, connecting dedicated scholars with the resources and institutional support necessary to pursue rigorous documentation projects. Our mission centers on providing historiographers and archivists with the tools to conduct ethical, community-based research while ensuring that the resulting documentation meets the highest standards of scholarly integrity. Through strategic partnerships and targeted funding initiatives, we enable researchers to dedicate the time and attention these complex preservation efforts require, fostering a new generation of scholarship rooted in respect for indigenous epistemologies and committed to expanding our collective understanding of human cultural heritage.
       </Text>
     </Wrapper>
   </section>
-  <section>
-    <Wrapper class="pt-12 pb-24">
-      <div class="overflow-hidden">
-        <Text
-          tag="h3"
-          variant="displayXL"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          class="dark:text-white text-base-900 font-medium tracking-tighter"
-        >
-          Awards &amp; honors
-        </Text>
-      </div>
-      <ul
-        role="list"
-        class="flex flex-col divide-y divide-base-200 dark:divide-base-800 border-t border-base-200 dark:border-base-800 mt-4"
-      >
-        {
-          awards.map((award) => (
-            <li class=" items-baseline flex flex-col lg:flex-row lg:justify-between py-4  sticky top-20 z-10 bg-base-100 dark:bg-base-900">
-              <div>
-                <Text
-                  tag="h3"
-                  variant="displayMD"
-                  class="dark:text-white text-base-900 font-medium tracking-tighter "
-                >
-                  {award.name}
-                </Text>
-                <Text
-                  tag="p"
-                  variant="textXL"
-                  class="text-base-500 dark:text-base-400"
-                >
-                  {award.award}
-                </Text>
-                <Text
-                  tag="p"
-                  variant="textXL"
-                  class="text-base-500 dark:text-base-500"
-                >
-                  {award.organization}
-                </Text>
-                <Text
-                  tag="p"
-                  variant="textXL"
-                  class="text-base-500 dark:text-base-600"
-                >
-                  {award.project}
-                </Text>
-              </div>
-              <a href={award.url} title={award.name} aria-label={award.name}>
-                <svg
-                  class="size-8 lg:size-14 dark:text-white text-base-900"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 256 256"
-                >
-                  <path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z" />
-                </svg>
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </Wrapper>
-  </section>
-  <LogoCloud />
-  <section>
-    <Wrapper variant="standard" class="py-24">
-      <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
-        <Text
-          tag="h3"
-          variant="displayXL"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          class="dark:text-white text-base-900 font-medium tracking-tighter"
-          >the
-          <br />
-          team
-        </Text>
+ 
 
-        <div
-          class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-y-12 gap-2 lg:col-span-3"
-        >
-          {
-            teamMembers.map((member, index) => (
-              <div class="flex flex-col ">
-                <Image
-                  width={500}
-                  height={500}
-                  src={member.image}
-                  alt={member.name}
-                  class="w-full  object-cover"
-                />
-                <div class="mt-2">
-                  <Text
-                    tag="h3"
-                    variant="textBase"
-                    class="leading-6 text-base-900 dark:text-white"
-                  >
-                    (0{index + 1}) {member.name}
-                  </Text>
-                  <Text
-                    tag="p"
-                    variant="textSM"
-                    class="text-base-500 dark:text-base-400"
-                  >
-                    {member.role}
-                  </Text>
-                  <Text
-                    tag="p"
-                    variant="textSM"
-                    class="text-base-500 mt-4 dark:text-base-400"
-                  >
-                    {member.bio}
-                  </Text>
-                </div>
-              </div>
-            ))
-          }
-        </div>
-      </div>
-    </Wrapper>
-    <section>
-      <Wrapper variant="standard" class="py-12">
-        <Text
-          tag="h3"
-          variant="displayMD"
-          class="dark:text-white xl:text-7xl tracking-tight font-medium text-black text-balance lg:col-span-3"
-        >
-          Let's work together to refine and elevate your brand, creating a
-          lasting impression that resonates with your audience.
-        </Text>
-        <div class="flex mt-4">
-          <Link size="xl" variant="default" href="/forms/contact">
-            Contact us
-          </Link>
-        </div>
-      </Wrapper>
-    </section>
-  </section>
+
 </BaseLayout>

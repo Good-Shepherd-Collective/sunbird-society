@@ -2,18 +2,26 @@
 // Fundations
 import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import { Image } from "astro:assets";
 ---
 
 <section>
-  <Wrapper variant="standard" class="py-24   lg:py-48">
+  <Wrapper variant="standard" class="py-24   lg:py-24">
+    <Image
+      src="/src/images/logo.svg"
+      alt="Hero Background"
+      loading="eager"
+      class="mb-12"
+      width={120}
+      height={180}></Image>
     <div class="overflow-hidden">
       <Text
         tag="h1"
         variant="displayMD"
         data-aos="fade-down"
         data-aos-duration="1500"
-        class="dark:text-white xl:text-6xl tracking-tight font-medium text-black text-balance"
-      >The Sunbird Society empowers truth seekers in the preservation of indigenous knowledge systems. We empower individuals and groups that advance decolonial historiography and praxis.
+        class="dark:text-white xl:text-6xl tracking-tight font-light text-black text-balance"
+      >The <span class="font-bold" style="color: rgba(217, 71, 1, 1);">Sunbird Society</span> empowers truth seekers in the preservation of indigenous knowledge systems.<br><br> We empower individuals and groups that advance decolonial historiography and praxis.
       </Text>
     </div>
   </Wrapper>
