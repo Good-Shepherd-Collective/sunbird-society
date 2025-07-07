@@ -1,6 +1,5 @@
 ---
 // Assets
-import Logo from "@/components/assets/Logo.astro";
 import ThemeToggle from "@/components/assets/ThemeToggle.astro";
 // Fundations
 import Link from "@/components/fundations/elements/Link.astro";
@@ -16,29 +15,41 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
       <div
         class="flex items-center justify-center size-14 bg-base-800 dark:bg-base-50 rounded-[calc(var(--card-radius)-var(--card-padding))]"
       >
-        <a href="/"><Logo class="h-6 text-white dark:text-base-900" /></a>
+        <a href="/">
+          <svg class="h-6 w-6 text-white dark:text-base-900" viewBox="0 0 344.32 344.32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle fill="#f89a3e" cx="172.16" cy="172.16" r="172.16"/>
+            <path fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="4" d="M5.28,247.85c62.18,2.61,124.68,4.82,187.4,6.62,16.42.47,32.95.92,49.47.7,15.7-.2,31.15-1,46.35-1.92,15.86-.96,31.92-2.11,44.97-4.38"/>
+            <path fill="currentColor" d="M168.31,223c2.64-.39,4.88.35,6.49,2.5,1.33,1.79,1.49,4.27,2.34,6.32.4.96,1.14,1.87,1.48,2.73,1.16,2.95-.15,13.7-1.78,16.52-1.79,3.1-4.78,2.02-5.16,6.83-.15,1.86.44,6.38-.46,7.75l-.79.52c-2.49-1.03-5.03-1.31-7.69-1.55l-.6-.72c1.26-3.17,4.43-6.37,4.23-10-.09-1.6-2.05-1.2-3.03-2.98-1.71-3.11-2.01-8.6-1.33-12.01.94-4.72,5.64-8.75.12-12.76-3.5-.26.96-.8,2.13-1.41,1.58-.82,3.53-1.68,4.03-1.75Z"/>
+            <path fill="currentColor" d="M243.71,251.96l.88,2.81,3.14-1.47c.26,1.17-1.82.8-1.79,2.01.41.36,2.59-.85,2.46.22l-1.66.42-.46,1.11c-1.72-.45-3.6-1.57-5.38-.87-.26-.26-.45-.25-.11-.55.78-.69,2.43.19,2.47-1.33-.22-3.75-3.61-1.61-5.36-.22-1.42,1.13-2.78,3.04-3.64,4.64-.45.83-1.48,3.94-2.13,4.13-1.38.42-5.98-2.35-5.88-3.86.06-1,4.34-4.63,5.26-5.72,4.51-5.33,4.2-13.3,8.65-19.54.76-1.06,3.38-3.22,2.2-4.52-.84-.57-1.88-.17-2.83-.53-.24-.09-.38.11-.3-.36,2.74-2.08,2.4-5.62,6.08-6.68,2.32-.67,5.54.1,7.24,1.85,1.89,1.95,3.98,9.87,4.14,12.64.51,8.61-5.04,13.88-12.98,15.79Z"/>
+          </svg>
+        </a>
       </div>
 
       
     <a
-      href="/system/overview"
+      href="/about"
       class="px-2 py-1 h-14 text-sm flex bg-base-800 dark:bg-base-50 items-center outline outline-base-900 dark:outline-base-100 dark:text-base-900 hover:bg-base-950  duration-300 rounded-[calc(var(--card-radius)-var(--card-padding))] text-white dark:hover:bg-base-300"
-      >Overview</a
+      >About</a
     >
     <a
-    href="/work/home"
+    href="/projects/home"
       class="px-2 py-1 h-14 text-sm flex bg-base-800 dark:bg-base-50 items-center outline outline-base-900 dark:outline-base-100 dark:text-base-900 hover:bg-base-950  duration-300 rounded-[calc(var(--card-radius)-var(--card-padding))] text-white dark:hover:bg-base-300"
-      >Work</a
+      >Projects</a
+    >
+    <a
+    href="/blog/home"
+      class="px-2 py-1 h-14 text-sm flex bg-base-800 dark:bg-base-50 items-center outline outline-base-900 dark:outline-base-100 dark:text-base-900 hover:bg-base-950  duration-300 rounded-[calc(var(--card-radius)-var(--card-padding))] text-white dark:hover:bg-base-300"
+      >Resources</a
     >
     <ThemeToggle
       class="px-2 py-1 size-14  flex bg-base-800 dark:bg-base-50 items-center outline outline-base-900 dark:outline-base-100 dark:text-base-900 hover:bg-base-950  duration-300 rounded-[calc(var(--card-radius)-var(--card-padding))] text-white dark:hover:bg-base-300"
     />
 
       <a
-      href="https://buy.polar.sh/polar_cl_1VZ_5CG_hCUa3jpsD91OT3rf333sjjrDLG2h6SbvGJg"
+      href="/forms/contact"
         class="px-2 py-1 h-14 text-sm flex font-medium items-center bg-base-50 text-base-900 outline outline-base-900 dark:outline-base-100 hover:bg-base-950 duration-300 rounded-[calc(var(--card-radius)-var(--card-padding))] dark:bg-base-900 dark:text-white dark:hover:bg-base-800"
       >
-        Buy Kotei
+        Contact
       </a>
     </div>
   </div>
